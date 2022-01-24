@@ -7,11 +7,13 @@ import { Post } from '../Post';
   providedIn: 'root'
 })
 export class PostService {
-  private apiUrl = "https://jsonplaceholder.typicode.com/posts"
+  private postsUrl = "https://jsonplaceholder.typicode.com/posts"
+
 
   constructor(private http: HttpClient) { }
 
-  getData(): Observable<Post[]> {
-    return this.http.get<Post[]>(this.apiUrl)
+  getPosts(): Observable<Post[]> {
+    return this.http.get<Post[]>(this.postsUrl)
   }
+
 }
