@@ -3,14 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from "@angular/common/http"
 
 import { AppComponent } from './app.component';
-import {AllcommentsComponent} from './components/allcomments/allcomments.component';
-import { CommentComponent } from './components/comment/comment.component'
+import { AllPostsComponent} from './components/all-posts/all-posts.component';
+import { PostComponent } from './components/post/post.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    AllcommentsComponent,
-    CommentComponent,
+    AllPostsComponent,
+    PostComponent,
   ],
   imports: [
     BrowserModule,

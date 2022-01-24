@@ -6,7 +6,7 @@ import { Post } from '../Post';
 @Injectable({
   providedIn: 'root'
 })
-export class CommentService {
+export class PostService {
   private apiUrl = "https://jsonplaceholder.typicode.com/posts"
 
   constructor(private http: HttpClient) { }
