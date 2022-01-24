@@ -17,4 +17,8 @@ export class AllPostsComponent implements OnInit {
     this.postService.getPosts().subscribe((posts)=> this.posts = posts)
   }
 
+  addNewPost(): void {
+    console.log("Later work on this")
+  }
+
 }

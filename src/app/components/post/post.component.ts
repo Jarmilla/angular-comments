@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {PostService} from "../../services/post.service"
 import { Post } from '../../Post';
 import {Comment} from "../../Comment"
 
@@ -20,7 +19,6 @@ export class PostComponent implements OnInit {
   toogleCommentsShown(userId: number): void {
     this.selectedUserId = userId
     console.log(this.selectedUserId)
-
   }
 
 }
