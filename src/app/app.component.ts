@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {CommentService} from "./services/comment.service"
 
 @Component({
   selector: 'app-root',
@@ -9,9 +8,7 @@ import {CommentService} from "./services/comment.service"
 export class AppComponent {
   title = 'angular-comments';
 
-  constructor(private comment : CommentService) {}
+  constructor() {}
 
-  getDataFromAPI() {
-    this.comment.getData().subscribe((data) => console.log(data))
-  }
+
 }

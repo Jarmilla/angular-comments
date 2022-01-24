@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
 import { Observable } from 'rxjs';
+import {HttpClient} from "@angular/common/http";
+import { Post } from '../Post';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class CommentService {
 
   constructor(private http: HttpClient) { }
 
-  getData(): Observable<any> {
-    return this.http.get<any>(this.apiUrl)
+  getData(): Observable<Post[]> {
+    return this.http.get<Post[]>(this.apiUrl)
   }
 }
