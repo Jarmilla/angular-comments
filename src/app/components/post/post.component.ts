@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {PostService} from "../../services/post.service"
 import { Post } from '../../Post';
 import {Comment} from "../../Comment"
 
@@ -9,16 +10,16 @@ import {Comment} from "../../Comment"
 })
 export class PostComponent implements OnInit {
   @Input() post: Post
-  selectedUserId? : number
+  comments: Comment[] = []
 
-  constructor() { }
+  constructor(private postService : PostService) { }
 
   ngOnInit(): void {
   }
 
-  toogleCommentsShown(userId: number): void {
-    this.selectedUserId = userId
-    console.log(this.selectedUserId)
+  toogleCommentsShown(id: number): void {
+    this.postService.getComments(id).subscribe((comments)=> this.comments = comments)
+    console.log(this.comments)
   }
 
 }
