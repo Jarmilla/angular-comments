@@ -19,7 +19,6 @@ export class PostComponent implements OnInit {
 
   toogleCommentsShown(id: number): void {
     this.postService.getComments(id).subscribe((comments)=> this.comments = comments)
-    console.log(this.comments)
   }
 
 }
