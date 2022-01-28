@@ -1,0 +1,15 @@
+<form>
+    <div>
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" [(ngModel)]="title" placeholder="Add Title">
+    </div>
+    <div>
+        <label for="body">Post</label>
+        <input type="text" id="body" name="body" [(ngModel)]="body" placeholder="Add text">
+    </div>
+    <div>
+        <label for="userid">userId</label>
+        <input type="number" id="userid" name="userid" [(ngModel)]="userId" placeholder="UserId">
+    </div>
+    <button type="submit">Post</button>
+</form>
