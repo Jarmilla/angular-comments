@@ -1,4 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { UiService } from '../../services/ui.service';
+import { Subscription } from 'rxjs';
 import {Post} from "../../Post"
 
 @Component({
@@ -11,8 +13,12 @@ export class AddPostComponent implements OnInit {
   title: string;
   body: string;
   userId: number;
+  showAddPost: boolean
+  subscription: Subscription
 
-  constructor() { }
+  constructor(private uiService: UiService) { 
+    this.subscription = this.uiService.onToggle().subscribe((value)=> this.showAddPost= value)
+  }
 
   ngOnInit(): void {
 

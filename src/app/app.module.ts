@@ -8,7 +8,8 @@ import { AllPostsComponent} from './components/all-posts/all-posts.component';
 import { PostComponent } from './components/post/post.component';
 import { ButtonComponent } from './components/button/button.component';
 import { CommentComponent } from './components/comment/comment.component';
-import { AddPostComponent } from './components/add-post/add-post.component'
+import { AddPostComponent } from './components/add-post/add-post.component';
+import { HeaderComponent } from './components/header/header.component'
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { AddPostComponent } from './components/add-post/add-post.component'
     ButtonComponent,
     CommentComponent,
     AddPostComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
