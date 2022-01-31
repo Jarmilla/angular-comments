@@ -21,6 +21,5 @@ export class HeaderComponent implements OnInit {
 
   toggleAddPost() {
     this.uiService.toggleAddPost()
-    console.log("alma")
   }
 }

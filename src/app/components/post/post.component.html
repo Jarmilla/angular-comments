@@ -2,5 +2,12 @@
 <h2>User: {{post.userId}}</h2>
 <h3> {{post.title}}</h3>
 <p>{{post.body}}</p>
-<app-button color="blue" text="Show Comments" (btnClick)="toogleCommentsShown(post.id)"></app-button>
-<app-comment *ngFor="let comment of comments" [comment]="comment"></app-comment>
+<app-button 
+    color="blue" 
+    text='{{showComments? "Hide Comments" : "Show Comments"}}'
+    (btnClick)="toogleCommentsShown(post.id)"
+></app-button>
+
+<ng-container *ngIf="showComments">
+    <app-comment *ngFor="let comment of comments" [comment]="comment"></app-comment>
+</ng-container>

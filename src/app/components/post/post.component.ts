@@ -10,6 +10,7 @@ import {Comment} from "../../Comment"
 })
 export class PostComponent implements OnInit {
   @Input() post: Post
+  showComments: boolean = false
   comments: Comment[] = []
 
   constructor(private postService : PostService) { }
@@ -19,6 +20,7 @@ export class PostComponent implements OnInit {
 
   toogleCommentsShown(id: number): void {
     this.postService.getComments(id).subscribe((comments)=> this.comments = comments)
+    this.showComments = !this.showComments
   }
 
 }
