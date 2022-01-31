@@ -17,8 +17,9 @@ export class AllPostsComponent implements OnInit {
     this.postService.getPosts().subscribe((posts)=> this.posts = posts)
   }
 
-  addNewPost(post: Post): void {
+  addNewPost(post: Post) {
     console.log(post)
+    this.postService.addPost(post).subscribe((post)=> this.posts.push(post))
   }
-
+ 
 }

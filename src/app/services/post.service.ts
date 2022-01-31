@@ -1,8 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import { Post } from '../Post';
 import {Comment} from "../Comment"
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    "Content-Type" : "application/json",
+  })
+}
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +21,10 @@ export class PostService {
 
   getPosts(): Observable<Post[]> {
     return this.http.get<Post[]>(this.baseUrl)
+  }
+
+  addPost(post: Post): Observable<Post> {
+    return this.http.post<Post>(this.baseUrl, post, httpOptions)
   }
 
   getComments(id: number): Observable<Comment[]> {
