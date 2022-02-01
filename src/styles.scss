@@ -13,6 +13,7 @@ $secondary-color: beige;
 
 html {
   font-family: 'Roboto',  Helvetica, sans-serif;
+
   scroll-behavior: smooth;
 }
 
@@ -109,4 +110,29 @@ header {
       padding: 3px 7px;
       font-size: 1rem;
     }
+  }
+
+  @media (max-width: 700px) {
+    html {
+      font-size: 90%;
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    main {
+      margin: 0 4%;
+    }
+
+    .text-container {
+      margin: 1rem;
+    }
+  }
+
+  @media (max-width: 414px) {
+    header h1 {
+      font-size: 1.5rem;
+    }
+
   }
