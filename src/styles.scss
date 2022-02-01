@@ -1,22 +1,112 @@
-/* You can add global styles to this file, and also import other style files */
-.toolbar {
-    position: absolute;
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+$highlight-font: 'Quintessential', cursive;
+$primary-color: #1976d2;
+$secondary-color: beige;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Roboto',  Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+header {
+    position: sticky;
     top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
+    height: 5rem;
     display: flex;
     align-items: center;
-    background-color: #1976d2;
-    color: white;
-    font-weight: 600;
+    justify-content: space-evenly;
+    background-color: $primary-color;
+    
+    h1 {
+      font-family: $highlight-font;
+      font-size: 3rem;
+      font-weight: 600;
+      color: $secondary-color;
+    }
   }
   
-  .content {
+  main {
     display: flex;
-    margin: 82px auto 32px;
-    padding: 0 16px;
-    max-width: 960px;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    margin: 0 8%;
+    top: 5rem;
+  }
+  
+  .post-container {
+    border-radius: 5px;
+    box-shadow: rgba(15, 10, 10, 0.35) 5px 10px 15px;
+  }
+  
+  .text-container {
+    margin: 2rem;
+    padding: 1rem;
+    background-color: $secondary-color;
+    h3 {
+      color: gray;
+    }
+    h3, p {
+      padding: 0.5rem 0;
+    }
+  }
+
+  .reactions-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .btn {
+    display: inline-block;
+    background: $primary-color;
+    color: $secondary-color;
+    margin: 0.5rem;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+  
+  .btn-block {
+    display: block;
+    width: 100%;
+  }
+
+  #to-form {
+    padding: 5rem 0 0 0;
+    width: 70vw;
+  }
+
+  .form-control {
+    margin: 1rem 0;
+    
+    label {
+      display: block;
+    } 
+    
+    input {
+      width: 100%;
+      height: 3rem;
+      margin: 5px;
+      padding: 3px 7px;
+      font-size: 1rem;
+    }
   }
